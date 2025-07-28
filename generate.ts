@@ -46,7 +46,7 @@ async function generateCSV() {
   for (let i = 0; i < rowCount; i++) {
     const record: any = {};
     columns.forEach(col => {
-      record[String(col.header)] = col.generator(i);
+      record[String(col.header)] = col.generator(i, record);
     });
     records.push(record);
   }

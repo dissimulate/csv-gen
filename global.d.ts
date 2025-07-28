@@ -1,4 +1,4 @@
 interface ColumnConfig {
   header: string;
-  generator: (index: number) => number | string | boolean;
+  generator: (index: number, record: Record<string, unknown>) => number | string | boolean;
 }
